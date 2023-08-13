@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface Props {
     id: string;
@@ -22,9 +23,11 @@ const UserCard = ({ id, name, username, imgUrl, personType }: Props) => {
                     <p className="text-small-medium text-gray-1">@{username}</p>
                 </div>
             </div>
-            <Button className="user-card_btn" onClick={() => router.push(`/profile/${id}`)}>
-                View
-            </Button>
+            <Link href={`/profile/${id}`}>
+                <Button className="user-card_btn">
+                    View
+                </Button>
+            </Link>
         </article>
 
     )

@@ -23,14 +23,14 @@ import { updateUser } from "@/lib/actions/user.actions"
 import { usePathname, useRouter } from "next/navigation"
 interface Props {
     user: {
-        id: 'string';
-        objectId: 'string';
-        username: 'string';
-        name: 'string';
-        image: 'string';
-        bio: 'string',
+        id: string;
+        objectId: string;
+        username: string;
+        name: string;
+        image: string;
+        bio: string,
     }
-    btnTitle: 'string';
+    btnTitle: string;
 }
 
 const AccountProfile = ({ user, btnTitle }: Props) => {
